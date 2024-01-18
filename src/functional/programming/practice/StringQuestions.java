@@ -32,7 +32,7 @@ public class StringQuestions {
                 otherCharacter.deleteCharAt(0);
             }
         }
-        System.out.println(output);
+        //System.out.println(output);
 
 //       WAP to find occurrence of words in String:
 //        Input : HOW ARE YOU WHERE ARE YOU
@@ -49,8 +49,7 @@ public class StringQuestions {
                 map.put(value, map.get(value) + 1);
             } else map.put(value, 1);
         }
-        map.entrySet().stream().forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue()));
-
+        //map.entrySet().stream().forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue()));
 
         //Write a program to count the number of words in the given string:
         String test = "Hello World Nischith";
@@ -61,7 +60,7 @@ public class StringQuestions {
             }
         }
         countOfWhiteSpace++;
-        System.out.println("number of words in the given string: " + countOfWhiteSpace);
+        //System.out.println("number of words in the given string: " + countOfWhiteSpace);
 
 
 //        Write a program to reverse the words in the given string, without using any additional variable.
@@ -74,7 +73,8 @@ public class StringQuestions {
         for (int i = inp.length - 1; i >= 0; i--) {
             expectedOutput += inp[i] + " ";
         }
-        System.out.println(expectedOutput);
+        //System.out.println(expectedOutput);
+
     }
 
     public static boolean isVowel(char c) {
