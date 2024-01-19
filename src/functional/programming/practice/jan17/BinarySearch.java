@@ -1,12 +1,15 @@
 package functional.programming.practice.jan17;
 
+import java.util.Arrays;
+
 public class BinarySearch {
     public static void main(String[] args) {
-        int i = searchElementInArray(new int[]{1,2,3,4,5,6,7,8,9,10}, 7);
+        int i = searchElementInArray(new int[]{3,5,7,95,32,12,67}, 67);
         System.out.println(i);
     }
 
     private static int searchElementInArray(int[] arr, int in) {
+        Arrays.sort(arr);
         int left = 0;
         int right = arr.length - 1;
 
