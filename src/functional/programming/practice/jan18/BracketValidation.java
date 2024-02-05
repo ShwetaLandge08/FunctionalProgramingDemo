@@ -3,7 +3,7 @@ package functional.programming.practice.jan18;
 public class BracketValidation {
     //    Bracket validation i/p "{()}[]" o/p "Balanced" OR i/p "{(a)}[[]" o/p "Not Balanced"s
     public static void main(String[] args) {
-
+        System.out.println(isValidBracket("{()}[]"));
     }
 
     private static boolean isValidBracket(String s) {

@@ -10,54 +10,48 @@ public class LinkedList {
         list.insertAtTheBeginning(13);
         list.insertAtTheBeginning(14);
         list.insertAtTheBeginning(15);
-        //list.traverse();
+        list.traverse();
+        list.insertAtEnd(23);
+        list.insertAtEnd(43);
+        list.traverse();
     }
 
     public void insertAtTheBeginning(int data) {
         Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+
         if (head == null) {
             head = newNode;
-            tail = newNode;
-        } else {
-            Node currentNode = head;
-            while (currentNode.getNext() != null) {
-                currentNode = currentNode.getNext();
-            }
-            newNode = currentNode.getNext();
         }
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            currentNode = currentNode.next;
+        }
+        currentNode.next = newNode;
     }
 
     public void traverse() {
         Node node = head;
         while (node != null) {
-            System.out.println(node.getData());
-            node = node.getNext();
+            System.out.print(node.data + ", ");
+            node = node.next;
         }
+        System.out.println();
     }
 }
 
 class Node {
-    private int data;
-    private Node next;
-
-    public int getData() {
-        return data;
-    }
-
-    public void setData(int data) {
-        this.data = data;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
+    int data;
+    Node next;
 
     public Node(int data) {
         this.data = data;
+        this.next = null;
     }
 
     @Override

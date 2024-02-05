@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int i = searchElementInArray(new int[]{3,5,7,95,32,12,67}, 67);
+        int i = searchElementInArray(new int[]{2, 4, 6, 7, 9, 3, 8}, 8);
         System.out.println(i);
     }
 
